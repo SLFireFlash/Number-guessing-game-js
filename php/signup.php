@@ -1,5 +1,3 @@
-<html>
-    <body>
 <?php
 include "dbconn.php";
 
@@ -13,19 +11,27 @@ $password=$_POST["Password"];
 // echo $userName . "<br>";
 // echo $email . "<br>";
 // echo $password . "<br>";
-$sqlq = "INSERT INTO users (Name,UserName,Email,PWord) VALUES ('$Name','$userName','$email','$password')";
-if($conn->query($sqlq) === TRUE){
-    echo "<script>alert('Sign Up Completed.. please login');</script>";
-    echo "<meta http-equiv='refresh' content='1;url=../index.html'>";
-    
-    
 
+$uNameSql = "SELECT * FROM users WHERE userName = '$userName'";
+$result =$conn->query($uNameSql);
+
+if (mysqli_num_rows($result) > 0) {
+    echo "<script>alert('User Name Not Available.. try again');</script>";
+    echo "<meta http-equiv='refresh' content='1;url=../signup.html'>";
+} else {
+    $sqlq = "INSERT INTO users (Name,UserName,Email,PWord) VALUES ('$Name','$userName','$email','$password')";
+    if($conn->query($sqlq) === TRUE){
+        echo "<script>alert('Sign Up Completed.. please login');</script>";
+        echo "<meta http-equiv='refresh' content='1;url=../index.html'>";
+    }
+    else{
+        echo $conn->error;
+    }
 }
-else{
-    echo $conn->error;
-}
+
+
+
+
 
 
 ?>
-</body>
-<html>
