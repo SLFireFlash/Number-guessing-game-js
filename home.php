@@ -22,7 +22,7 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link active" href="#">Games</a>
+                    <a class="nav-link active" href="addCoin.html">Buy Coins</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav me-2 mb-2 mb-lg-0">
