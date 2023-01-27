@@ -40,7 +40,7 @@
                         <li><a class="dropdown-item" href="#">Account</a></li>
                         <li><a class="dropdown-item" href="#">Settings</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                        <li><a class="dropdown-item" href="php/logout.php">Logout</a></li>
                     </ul>
                 </li>
                 </ul>
@@ -48,39 +48,8 @@
             </nav>
 
         <div class="gamebody">
-            <!-- <div class="number-select">
-                <div class="in-num-txt">
-                    <p>select your number</p>
-                </div>
-                <div class="in-num-box">
-                    <div class="in-numbers" id="in-num-00">0</div>
-                    <div class="in-numbers" id="in-num-01">1</div>
-                    <div class="in-numbers" id="in-num-02">2</div>
-                    <div class="in-numbers" id="in-num-03">3</div>
-                    <div class="in-numbers" id="in-num-04">4</div>
-                    <div class="in-numbers" id="in-num-05">5</div>
-                    <div class="in-numbers" id="in-num-06">6</div>
-                    <div class="in-numbers" id="in-num-07">7</div>
-                    <div class="in-numbers" id="in-num-08">8</div>
-                    <div class="in-numbers" id="in-num-09">9</div>
-                    
-                </div>
-            </div> -->
-            <form action="">
-                Enter Your guess
-                <input type="text" name="player-number" id="player-in-number">
-                <button type="button" id="select-player-number" onclick="SelectInputNumber()">Start Game</button>
-                <br>
-                Your Number
-                <div class="in-numbers" id="user-num"></div>
-                <br>
-                Game Numbers
-                <div class="in-numbers" id="game-num1"></div>
-                <div class="in-numbers" id="game-num2"></div>
-                <div class="in-numbers" id="game-num3"></div>
 
 
-            </form>
         </div>
         
         <div class="footer">
@@ -126,6 +95,4 @@
     <script src="js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
-
-
 </html>
