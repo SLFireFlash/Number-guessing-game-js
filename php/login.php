@@ -1,5 +1,8 @@
 <?php
+// Start the session
+session_start();
 include "dbConn.php";
+
 
 $loginName = $_POST['loginName'];
 $loginPw =$_POST['loginPw'];
@@ -9,6 +12,8 @@ $uNameSql = "SELECT userName,PWord FROM users WHERE userName = '$loginName' AND 
 $result =$conn->query($uNameSql);
 
 if (mysqli_num_rows($result) > 0) {
+    $_SESSION['username'] = $loginName;
+
     echo '<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -46,7 +51,7 @@ if (mysqli_num_rows($result) > 0) {
 </html>
     
     ';
-    echo "<meta http-equiv='refresh' content='3;url=../home.html'>";
+    echo "<meta http-equiv='refresh' content='3;url=../home.php'>";
 
 
 }
@@ -88,7 +93,7 @@ else{
     </body>
 </html>
     ';
-    echo "<meta http-equiv='refresh' content='1;url=../index.html'>";
+    echo "<meta http-equiv='refresh' content='1;url=../index.php'>";
 
 }
 
