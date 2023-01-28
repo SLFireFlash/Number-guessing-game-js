@@ -19,29 +19,52 @@ session_start();
 
 $username = $_SESSION['username'];
 $coinAmount = $_POST['coinamount'];
+$userPw = $_POST['playerPw'];
 
-$sqlGetCoin = "SELECT CoinAmount from users WHERE UserName = '$username'";
+$sqlGetCoin = "SELECT CoinAmount from users WHERE UserName = '$username' AND PWord = '$userPw'";
 $getCoinResult = $conn->query($sqlGetCoin);
 
-while($row = $getCoinResult->fetch_assoc()){
-    $coinAmount += $row['CoinAmount'];
-}
-$sqlAddcoinQuery = "UPDATE users SET CoinAmount ='$coinAmount' WHERE UserName = '$username'";
+if (mysqli_num_rows($getCoinResult) > 0) {
+    while($row = $getCoinResult->fetch_assoc()){
+        $coinAmount += $row['CoinAmount'];
+     }
+    $sqlAddcoinQuery = "UPDATE users SET CoinAmount ='$coinAmount' WHERE UserName = '$username'";        
+    if($conn->query($sqlAddcoinQuery) === TRUE){
 
-if($conn->query($sqlAddcoinQuery) === TRUE){
+        // $sqlGetCoin = "SELECT CoinAmount from users WHERE UserName = '$username'";
+        // $coinAm = $conn->query($sqlGetCoin);
+        // echo $coinAm;
+        $_SESSION['coinAmount'] = $coinAmount;
+        echo '
+        <div class="loader-overlay">
+        <div class="popup-spinner">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <div class="text-center">
+                <h4>Coin Added</h4>
+                <br>
+              </div>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100"
+                  aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>';
+      echo "<meta http-equiv='refresh' content='1;url=../home.php'>";
+    }
 
-    // $sqlGetCoin = "SELECT CoinAmount from users WHERE UserName = '$username'";
-    // $coinAm = $conn->query($sqlGetCoin);
-    // echo $coinAm;
-    $_SESSION['coinAmount'] = $coinAmount;
-    echo $coinAmount;
+
+
+}else{
     echo '
     <div class="loader-overlay">
     <div class="popup-spinner">
       <div class="card" style="width: 18rem;">
         <div class="card-body">
           <div class="text-center">
-            <h4>Coin Adding..</h4>
+            <h4>Something went Wrong check password</h4>
             <br>
           </div>
           <div class="progress">
@@ -52,10 +75,8 @@ if($conn->query($sqlAddcoinQuery) === TRUE){
       </div>
     </div>
   </div>';
-  echo "<meta http-equiv='refresh' content='1;url=../home.php'>";
+  echo "<meta http-equiv='refresh' content='2;url=../addCoin.html'>";
 }
-
-
 
 
 ?>

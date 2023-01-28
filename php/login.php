@@ -36,7 +36,7 @@ if (mysqli_num_rows($result) > 0) {
               <div class="card" style="width: 18rem;">
                 <div class="card-body">
                   <div class="text-center">
-                    <h4>Loading</h4>
+                    <h4>loging...</h4>
                     <br>
                   </div>
                   <div class="progress">
