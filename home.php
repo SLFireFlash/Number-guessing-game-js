@@ -22,14 +22,22 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link active" href="addCoin.html">Buy Coins</a>
+                    <a class="nav-link active" href="addCoin.html">Add Coins</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav me-2 mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">
+                    <?php
+                        session_start();
+                        echo strtoupper($_SESSION['coinAmount']);
+                        ?>
+                    </a>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="navDropDown">
                     <?php
-                        session_start();
+
                         if(!isset($_SESSION['username'])) {
                             header('Location: index.html');
                             exit;}

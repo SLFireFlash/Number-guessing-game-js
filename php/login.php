@@ -8,11 +8,15 @@ $loginName = $_POST['loginName'];
 $loginPw =$_POST['loginPw'];
 
 
-$uNameSql = "SELECT userName,PWord FROM users WHERE userName = '$loginName' AND PWord ='$loginPw'";
+$uNameSql = "SELECT userName,PWord,CoinAmount FROM users WHERE userName = '$loginName' AND PWord ='$loginPw'";
 $result =$conn->query($uNameSql);
 
 if (mysqli_num_rows($result) > 0) {
+    while($row = $result->fetch_assoc()) {
+      $value = $row["CoinAmount"];}
     $_SESSION['username'] = $loginName;
+    $_SESSION['coinAmount'] = $value;
+
 
     echo '<!DOCTYPE html>
     <html lang="en">
