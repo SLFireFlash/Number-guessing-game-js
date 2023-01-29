@@ -1,14 +1,29 @@
 var btnSelectCoinsClicked =false;
+var btnSelectNumberClicked= false;
+var clickedBtnValueCoin =0;
 
-function hideCoinSelector(){
+function CoinSelector(){
         $("button").click(function(){
             if(btnSelectCoinsClicked == false){
-                clickedBtnValue =$(this).val();
-                clickedBtn = "btn-select-coin-"+clickedBtnValue;
+                clickedBtnValueCoin =$(this).val();
+                clickedBtn = "btn-select-coin-"+clickedBtnValueCoin;
                 document.getElementById(clickedBtn).style.backgroundColor ="red";
                 btnSelectCoinsClicked =true;
             }
         });
-    alert("You Selected " + clickedBtnValue + " Coins");
+    alert("You Selected " + clickedBtnValueCoin + " Coins");
+
+}
+
+function numberSelector(){
+    $("button").click(function(){
+        if(btnSelectNumberClicked == false){
+            clickedBtnValueNumber =$(this).val();
+            clickedBtn = "btn-select-Number-"+clickedBtnValueNumber;
+            document.getElementById(clickedBtn).style.backgroundColor ="red";
+            btnSelectNumberClicked =true;
+        }
+    });
+alert("You Selected Number " + clickedBtnValueNumber);
 
 }

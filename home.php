@@ -60,29 +60,29 @@
           <div class="select-items">
             <div class="select-coins">
               <h1><span>SELECT COINS</span></h1>
-                <button class="button btn-select-coin p-2" value="50" onclick="hideCoinSelector()" id="btn-select-coin-50"><span>50</span></button>
-                <button class="button btn-select-coin p-2" value="100" onclick="hideCoinSelector()" id="btn-select-coin-100"><span>100</span></button>
+                <button class="button btn-select-coin p-2" value="50" onclick="CoinSelector()" id="btn-select-coin-50"><span>50</span></button>
+                <button class="button btn-select-coin p-2" value="100" onclick="CoinSelector()" id="btn-select-coin-100"><span>100</span></button>
                 <br>
-                <button class="button btn-select-coin p-2" value="200" onclick="hideCoinSelector()" id="btn-select-coin-200"><span>200</span></button>
-                <button class="button btn-select-coin p-2" value="500" onclick="hideCoinSelector()" id="btn-select-coin-500"><span>500</span></button>
+                <button class="button btn-select-coin p-2" value="200" onclick="CoinSelector()" id="btn-select-coin-200"><span>200</span></button>
+                <button class="button btn-select-coin p-2" value="500" onclick="CoinSelector()" id="btn-select-coin-500"><span>500</span></button>
 
             </div>
             <div class="select-number">
               <h1><span>SELECT NUMBER</span></h1>
-              <button class="button btn-select-number p-2"><span>1</span></button>
-              <button class="button btn-select-number p-2"><span>2</span></button>
+              <button class="button btn-select-number p-2" onclick="numberSelector()" value="1" id="btn-select-number-1"><span>1</span></button>
+              <button class="button btn-select-number p-2" onclick="numberSelector()" value="2" id="btn-select-number-2"><span>2</span></button>
               <br>
-              <button class="button btn-select-number p-2"><span>3</span></button>
-              <button class="button btn-select-number p-2"><span>4</span></button>
+              <button class="button btn-select-number p-2" onclick="numberSelector()" value="3" id="btn-select-number-3"><span>3</span></button>
+              <button class="button btn-select-number p-2" onclick="numberSelector()" value="4" id="btn-select-number-4"><span>4</span></button>
               <br>
-              <button class="button btn-select-number p-2"><span>5</span></button>
-              <button class="button btn-select-number p-2"><span>6</span></button>
+              <button class="button btn-select-number p-2" onclick="numberSelector()" value="5" id="btn-select-number-5"><span>5</span></button>
+              <button class="button btn-select-number p-2" onclick="numberSelector()" value="6" id="btn-select-number-6"><span>6</span></button>
               <br>
-              <button class="button btn-select-number p-2"><span>7</span></button>
-              <button class="button btn-select-number p-2"><span>8</span></button>
+              <button class="button btn-select-number p-2" onclick="numberSelector()" value="7" id="btn-select-number-7"><span>7</span></button>
+              <button class="button btn-select-number p-2" onclick="numberSelector()" value="8" id="btn-select-number-8"><span>8</span></button>
               <br>
-              <button class="button btn-select-number p-2"><span>9</span></button>
-              <button class="button btn-select-number p-2"><span>0</span></button>
+              <button class="button btn-select-number p-2" onclick="numberSelector()" value="9" id="btn-select-number-9"><span>9</span></button>
+              <button class="button btn-select-number p-2" onclick="numberSelector()" value="0" id="btn-select-number-0"><span>0</span></button>
 
             </div>
             <div class="start-game">
