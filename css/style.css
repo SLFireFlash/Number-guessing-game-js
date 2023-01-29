@@ -5,6 +5,11 @@ body{
     height: 100%;
 }
 
+.itemHideFromDisplay{
+  display: none;
+
+}
+
 
 
 .button {

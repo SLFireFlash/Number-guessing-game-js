@@ -60,11 +60,11 @@
           <div class="select-items">
             <div class="select-coins">
               <h1><span>SELECT COINS</span></h1>
-                <button class="button btn-select-coin p-2" id="btn-select-coin-50"><span>50</span></button>
-                <button class="button btn-select-coin p-2" id="btn-select-coin-100"><span>100</span></button>
+                <button class="button btn-select-coin p-2" value="50" onclick="hideCoinSelector()" id="btn-select-coin-50"><span>50</span></button>
+                <button class="button btn-select-coin p-2" value="100" onclick="hideCoinSelector()" id="btn-select-coin-100"><span>100</span></button>
                 <br>
-                <button class="button btn-select-coin p-2" id="btn-select-coin-200"><span>200</span></button>
-                <button class="button btn-select-coin p-2" id="btn-select-coin-500"><span>500</span></button>
+                <button class="button btn-select-coin p-2" value="200" onclick="hideCoinSelector()" id="btn-select-coin-200"><span>200</span></button>
+                <button class="button btn-select-coin p-2" value="500" onclick="hideCoinSelector()" id="btn-select-coin-500"><span>500</span></button>
 
             </div>
             <div class="select-number">
@@ -137,6 +137,7 @@
     </div>
    
     <script src="js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </html>
