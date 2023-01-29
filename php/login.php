@@ -55,7 +55,7 @@ if (mysqli_num_rows($result) > 0) {
 </html>
     
     ';
-    echo "<meta http-equiv='refresh' content='3;url=../home.php'>";
+    echo "<meta http-equiv='refresh' content='1;url=../home.php'>";
 
 
 }
