@@ -91,6 +91,7 @@ body {
 #app {
   width: 100%;
   height: 100%;
+  background: #1a2b45;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -121,8 +122,18 @@ body {
   font-size: 3rem;
 }
 
+.buttons {
+  margin: 1rem 0 2rem 0;
+}
 
-
+button {
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin: 0 0.2rem;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
 
 .info {
   position: fixed;
