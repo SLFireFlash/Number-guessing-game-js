@@ -116,49 +116,7 @@
               </div>
             </div>
           </div>
-
-        </div>
-        
-        
-        <div class="footer">
-            <!-- Footer -->
-      <footer class="text-center text-lg-start bg-dark text-muted">
-        <!-- Section: Links  -->
-        <section class="">
-          <div class="container text-center text-md-start mt-5">
-            <!-- Grid row -->
-            <div class="row mt-3">
-              <!-- Grid column -->
-              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                <!-- Content -->
-                <h6 class="text-uppercase fw-bold mb-4">
-                  <i class="fas fa-gem me-3"></i>TeamHiru
-                </h6>
-                <p>
-                  Building games for every player.
-                </p>
-              </div>
-              <!-- Grid column -->
-              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                <!-- Links -->
-                <h6 class="text-uppercase fw-bold mb-4">
-                  Useful links
-                </h6>
-                <p>
-                  <a href="https://youtube.com/c/slfireflash" class="text-reset">Youtube</a>
-                </p>
-                <p>
-                  <a href="https://twitter.com/sl_fireflash" class="text-reset">Twitter</a>
-                </p>
-                <p>
-                  <a href="https://github.com/SlFireFlash" class="text-reset">Github</a>
-                </p>
-              </div>
-              <!-- Grid column -->
-      </footer>
-      <!-- Footer -->
-        </div>
-    </div>
+          </div>
    
     <script src="js/app.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
