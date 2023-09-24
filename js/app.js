@@ -5,6 +5,11 @@ var btnSelectNumberClicked =false;
 
 
 
+function startWordle(){
+  
+}
+
+
 function CoinSelector(){
         $("button").click(function(){
             if(btnSelectCoinsClicked == false){
